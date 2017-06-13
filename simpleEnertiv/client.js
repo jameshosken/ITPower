@@ -106,3 +106,20 @@ function getClientInfo(path, token) {
     });
   });
 }
+
+var express = require('express'); // include the express library
+var server = express();           // create a server using express
+
+// start the server:
+server.listen(8080);
+
+server.use('/', express.static('public'));   // set a static file directory
+
+// send message to the client
+function handleRequest(request, response) {
+  response.send(clientData);         // send message to the client
+  response.end();                 // close the connection
+}
+
+// define what to do when the client requests `/data`:
+server.get('/data', handleRequest);         // GET request
