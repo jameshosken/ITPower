@@ -6,8 +6,8 @@ var loginData = querystring.stringify({
 	'client_id':'c99b7f5dec0d6a0f6178',
 	'client_secret': '575af139440e5ae453d6171d14efd8ce3a4f3005',
 	'grant_type': 'password',
-	'username': 'mmg542@nyu.edu',
-	'password': 'energyatitp',
+	'username': 'qwerty@nyu.edu',
+	'password': 'qwert',
 })
 
 console.log(loginData);
