@@ -5,6 +5,9 @@
 * Get data about Power in ITP from the enertiv server
 * Try and make this data available on a website (realtime)
 
+Final Result
+![Final Result](http://imgur.com/a/6cFSb)
+
 ## Why are we using Node ?
 
 ## How to install Node
@@ -196,7 +199,7 @@ function saveToken(response) {
 
 ```
 
-###2) Get Data from the server
+### 2) Get Data from the server
 
 * Now that we are able to access the server,let's get some data from the server.
 * We need to create a new set of options for the second request.
@@ -435,7 +438,7 @@ function getClientInfo(path, token) {
 }
 ```
 
-###3) Getting realtime data
+### 3) Getting realtime data
 
 * We can also choose one equipment on the floor, and get its power consumption data in real time
 
@@ -523,6 +526,9 @@ setInterval(function() {
 ```
 
 * when you run `node client.js` now, you will see the data being sent every 10s/30s
+
+* ### **Checkpoint 3**
+
 ## Express
 * How to install Express?
 `$ npm install express`
