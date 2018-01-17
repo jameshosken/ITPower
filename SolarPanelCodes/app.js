@@ -95,7 +95,7 @@ function openConnection() {
   });
 }
 function post() {
-  let query = 'INSERT INTO BatteryValues (RecordTime, RawReading, BatteryVoltage, ChargingCurrent) VALUES (CURTIME(),$
+  let query = 'INSERT INTO BatteryValues (RecordTime, RawReading, BatteryVoltage, ChargingCurrent) VALUES (CURTIME(), ' + rawData + ' , ' + batteryVoltage + ' , ' + chargingCurrent + ');';
 
   connection.query(query, function(error, results, fields) {
     if (error) throw error;
