@@ -5,7 +5,7 @@ void setup()
   Serial.begin(115200);
   Serial.println();
 
-  WiFi.begin("AndroidAP", "poop1234");
+  WiFi.begin("", "");
 
   Serial.print("Connecting");
   while (WiFi.status() != WL_CONNECTED)
