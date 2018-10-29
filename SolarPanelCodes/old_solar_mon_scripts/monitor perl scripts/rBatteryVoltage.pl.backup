@@ -1,0 +1,18 @@
+#!/usr/local/bin/perl
+# Reads the battery voltage from a Tristar TS-45 via Modbus RTU
+# Prints the battery voltage and raw decimal response to the screen
+
+use Modbus::Client;
+use Math::Round;
+
+$bus = new Modbus::Client "/dev/ttyUSB0";
+$unit = $bus->device(1);
+
+# Read the battery voltage from the TriStar
+# PDU Addr. 0x0008
+# Logical Addr. 9
+$response = $unit->read_one(30009);
+
+$batteryVoltage = nearest(.01,(($response * 96.667) / 32768));
+
+print "Battery Voltage: ".$batteryVoltage." V\nRaw Response (DEC): ".$response."\n";
