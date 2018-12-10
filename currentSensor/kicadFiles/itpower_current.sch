@@ -1,0 +1,370 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "ITPower - current sensing"
+Date "2018-11-14"
+Rev "0.1"
+Comp "NYU_ITP"
+Comment1 ""
+Comment2 "Supervised by Tom Igoe"
+Comment3 "Edited by Rushali Paratey"
+Comment4 "Designed by Elizabeth Fergusan"
+$EndDescr
+$Comp
+L pspice:DIODE D1
+U 1 1 5BEB28DD
+P 1850 2700
+F 0 "D1" V 1896 2572 50  0000 R CNN
+F 1 "DIODE" V 1805 2572 50  0000 R CNN
+F 2 "Diode_THT:D_T-1_P10.16mm_Horizontal" H 1850 2700 50  0001 C CNN
+F 3 "" H 1850 2700 50  0001 C CNN
+	1    1850 2700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L pspice:DIODE D2
+U 1 1 5BEB2929
+P 1850 3400
+F 0 "D2" V 1804 3528 50  0000 L CNN
+F 1 "DIODE" V 1895 3528 50  0000 L CNN
+F 2 "Diode_THT:D_T-1_P10.16mm_Horizontal" H 1850 3400 50  0001 C CNN
+F 3 "" H 1850 3400 50  0001 C CNN
+	1    1850 3400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5BEB30CC
+P 2400 3000
+F 0 "R1" H 2470 3046 50  0000 L CNN
+F 1 "68 ohms" H 2470 2955 50  0000 L CNN
+F 2 "Resistor_THT:R_Radial_Power_L11.0mm_W7.0mm_P5.00mm" V 2330 3000 50  0001 C CNN
+F 3 "~" H 2400 3000 50  0001 C CNN
+	1    2400 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5BEB31D5
+P 2750 2500
+F 0 "R2" V 2543 2500 50  0000 C CNN
+F 1 "680 ohms" V 2634 2500 50  0000 C CNN
+F 2 "Resistor_THT:R_Radial_Power_L11.0mm_W7.0mm_P5.00mm" V 2680 2500 50  0001 C CNN
+F 3 "~" H 2750 2500 50  0001 C CNN
+	1    2750 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L Amplifier_Operational:LM358 U1
+U 1 1 5BEB32BB
+P 3500 2400
+F 0 "U1" H 3500 2767 50  0000 C CNN
+F 1 "LM358" H 3500 2676 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_LongPads" H 3500 2400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 3500 2400 50  0001 C CNN
+	1    3500 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM358 U1
+U 2 1 5BEB3382
+P 4800 2500
+F 0 "U1" H 4800 2867 50  0000 C CNN
+F 1 "LM358" H 4800 2776 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_LongPads" H 4800 2500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 4800 2500 50  0001 C CNN
+	2    4800 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5BEB3426
+P 3500 2900
+F 0 "R3" V 3293 2900 50  0000 C CNN
+F 1 "680 ohms" V 3384 2900 50  0000 C CNN
+F 2 "Resistor_THT:R_Radial_Power_L11.0mm_W7.0mm_P5.00mm" V 3430 2900 50  0001 C CNN
+F 3 "~" H 3500 2900 50  0001 C CNN
+	1    3500 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5BEB34E8
+P 4400 3100
+F 0 "R4" H 4470 3146 50  0000 L CNN
+F 1 "10k" H 4470 3055 50  0000 L CNN
+F 2 "Resistor_THT:R_Radial_Power_L11.0mm_W7.0mm_P5.00mm" V 4330 3100 50  0001 C CNN
+F 3 "~" H 4400 3100 50  0001 C CNN
+	1    4400 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5BEB3583
+P 5650 3050
+F 0 "R6" H 5720 3096 50  0000 L CNN
+F 1 "3.3k" H 5720 3005 50  0000 L CNN
+F 2 "Resistor_THT:R_Radial_Power_L11.0mm_W7.0mm_P5.00mm" V 5580 3050 50  0001 C CNN
+F 3 "~" H 5650 3050 50  0001 C CNN
+	1    5650 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5BEB3945
+P 6200 2900
+F 0 "C1" H 6315 2946 50  0000 L CNN
+F 1 "47uF" H 6315 2855 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Axial_L10.0mm_D6.0mm_P15.00mm_Horizontal" H 6238 2750 50  0001 C CNN
+F 3 "~" H 6200 2900 50  0001 C CNN
+	1    6200 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 2500 1850 2350
+Wire Wire Line
+	1850 2350 2400 2350
+Wire Wire Line
+	2400 2350 2400 2500
+Wire Wire Line
+	2400 2500 2600 2500
+Connection ~ 2400 2500
+Wire Wire Line
+	2400 2500 2400 2850
+Wire Wire Line
+	1850 3600 1850 3750
+Wire Wire Line
+	1850 3750 2400 3750
+Wire Wire Line
+	2400 3750 2400 3150
+Wire Wire Line
+	2900 2500 3100 2500
+Wire Wire Line
+	3100 2500 3100 2900
+Wire Wire Line
+	3100 2900 3350 2900
+Connection ~ 3100 2500
+Wire Wire Line
+	3100 2500 3200 2500
+$Comp
+L pspice:DIODE D3
+U 1 1 5BEB4C8F
+P 4000 2400
+F 0 "D3" H 4000 2665 50  0000 C CNN
+F 1 "DIODE" H 4000 2574 50  0000 C CNN
+F 2 "Diode_THT:D_T-1_P10.16mm_Horizontal" H 4000 2400 50  0001 C CNN
+F 3 "" H 4000 2400 50  0001 C CNN
+	1    4000 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 2900 4200 2900
+Wire Wire Line
+	4200 2900 4200 2400
+Wire Wire Line
+	3200 2300 3000 2300
+Wire Wire Line
+	3000 2300 3000 3750
+Wire Wire Line
+	3000 3750 2400 3750
+Connection ~ 2400 3750
+Wire Wire Line
+	4200 2400 4500 2400
+Connection ~ 4200 2400
+Wire Wire Line
+	4500 2600 4400 2600
+Wire Wire Line
+	4400 2600 4400 2950
+Wire Wire Line
+	4400 3250 4400 3750
+Wire Wire Line
+	4400 3750 3000 3750
+Connection ~ 3000 3750
+$Comp
+L pspice:DIODE D4
+U 1 1 5BEB5B33
+P 5300 2500
+F 0 "D4" H 5300 2765 50  0000 C CNN
+F 1 "DIODE" H 5300 2674 50  0000 C CNN
+F 2 "Diode_THT:D_T-1_P10.16mm_Horizontal" H 5300 2500 50  0001 C CNN
+F 3 "" H 5300 2500 50  0001 C CNN
+	1    5300 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 2600 4500 2850
+Wire Wire Line
+	4500 2850 5500 2850
+Wire Wire Line
+	5500 2850 5500 2500
+Connection ~ 4500 2600
+Wire Wire Line
+	5500 2500 5650 2500
+Wire Wire Line
+	5650 2500 5650 2900
+Connection ~ 5500 2500
+Wire Wire Line
+	5650 2500 6200 2500
+Wire Wire Line
+	6200 2500 6200 2750
+Connection ~ 5650 2500
+Wire Wire Line
+	5650 3200 5650 3750
+Wire Wire Line
+	5650 3750 4400 3750
+Connection ~ 4400 3750
+Wire Wire Line
+	6200 3750 5650 3750
+Connection ~ 5650 3750
+$Comp
+L Amplifier_Operational:LM358 U1
+U 3 1 5BEB73D5
+P 2000 1750
+F 0 "U1" H 1958 1796 50  0000 L CNN
+F 1 "LM358" H 1958 1705 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_LongPads" H 2000 1750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 2000 1750 50  0001 C CNN
+	3    2000 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male J2
+U 1 1 5BEB7662
+P 6950 3150
+F 0 "J2" H 6923 3080 50  0000 R CNN
+F 1 "Conn_01x03_Male" H 6923 3171 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 6950 3150 50  0001 C CNN
+F 3 "~" H 6950 3150 50  0001 C CNN
+	1    6950 3150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6550 3050 6550 2500
+Wire Wire Line
+	6550 2500 6200 2500
+Connection ~ 6200 2500
+Wire Wire Line
+	6500 3150 6500 3750
+Wire Wire Line
+	6500 3750 6200 3750
+Connection ~ 6200 3750
+$Comp
+L power:+5V #PWR0101
+U 1 1 5BEB8A6D
+P 6850 3400
+F 0 "#PWR0101" H 6850 3250 50  0001 C CNN
+F 1 "+5V" V 6865 3528 50  0000 L CNN
+F 2 "" H 6850 3400 50  0001 C CNN
+F 3 "" H 6850 3400 50  0001 C CNN
+	1    6850 3400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6650 3250 6650 3400
+Wire Wire Line
+	6650 3400 6800 3400
+$Comp
+L power:+5V #PWR0102
+U 1 1 5BEB925F
+P 1900 1450
+F 0 "#PWR0102" H 1900 1300 50  0001 C CNN
+F 1 "+5V" H 1915 1623 50  0000 C CNN
+F 2 "" H 1900 1450 50  0001 C CNN
+F 3 "" H 1900 1450 50  0001 C CNN
+	1    1900 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5BEB9399
+P 1900 2050
+F 0 "#PWR0103" H 1900 1800 50  0001 C CNN
+F 1 "GND" H 1905 1877 50  0000 C CNN
+F 2 "" H 1900 2050 50  0001 C CNN
+F 3 "" H 1900 2050 50  0001 C CNN
+	1    1900 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5BEB98ED
+P 6500 3150
+F 0 "#PWR0104" H 6500 2900 50  0001 C CNN
+F 1 "GND" V 6505 3022 50  0000 R CNN
+F 2 "" H 6500 3150 50  0001 C CNN
+F 3 "" H 6500 3150 50  0001 C CNN
+	1    6500 3150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6650 3250 6750 3250
+Wire Wire Line
+	6550 3050 6750 3050
+Wire Wire Line
+	6200 3050 6200 3750
+Connection ~ 6500 3150
+$Comp
+L pspice:CAP C2
+U 1 1 5BEBC53F
+P 1500 1700
+F 0 "C2" H 1678 1746 50  0000 L CNN
+F 1 "100nF" H 1678 1655 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Axial_L10.0mm_D4.5mm_P15.00mm_Horizontal" H 1500 1700 50  0001 C CNN
+F 3 "" H 1500 1700 50  0001 C CNN
+	1    1500 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 3150 6750 3150
+Wire Wire Line
+	1400 2850 1750 2850
+Wire Wire Line
+	1750 2850 1750 2900
+Wire Wire Line
+	1750 2900 1850 2900
+Wire Wire Line
+	1400 2950 1850 2950
+Wire Wire Line
+	1850 2950 1850 3200
+Wire Wire Line
+	1500 1450 1900 1450
+Wire Wire Line
+	1500 1950 1750 1950
+Wire Wire Line
+	1750 1950 1750 2050
+Wire Wire Line
+	1750 2050 1900 2050
+Connection ~ 1900 1450
+Connection ~ 1900 2050
+$Comp
+L Connector:Conn_01x02_Male J1
+U 1 1 5BECADDF
+P 1200 2850
+F 0 "J1" H 1306 3028 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 1306 2937 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 1200 2850 50  0001 C CNN
+F 3 "~" H 1200 2850 50  0001 C CNN
+	1    1200 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D5
+U 1 1 5BECBAF0
+P 6650 3750
+F 0 "D5" H 6641 3966 50  0000 C CNN
+F 1 "LED" H 6641 3875 50  0000 C CNN
+F 2 "LED_THT:LED_D1.8mm_W3.3mm_H2.4mm" H 6650 3750 50  0001 C CNN
+F 3 "~" H 6650 3750 50  0001 C CNN
+	1    6650 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 3750 6800 3400
+Connection ~ 6800 3400
+Wire Wire Line
+	6800 3400 6850 3400
+Connection ~ 6500 3750
+$EndSCHEMATC
