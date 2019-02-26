@@ -16,8 +16,11 @@ ITP now owns a sparkfun weather station with the associated shield (v12). This r
 1. Stabilise your weather station (I used a speed clamp and zip ties)
 2. Plug in the Wind and Rain cable connectors from the weather station into the weather shield. Mount the shield onto an Arduino.
 3. Install **Sparkfun MPL3115** and **Sparkfun Si7021** from the Arduino IDE libraries manager
-4. Upload the code in **Arduino/sparkfun_weather_shield_basic.ino** from this repo
+4. Upload the code in **Arduino/sparkfun_weather_station.ino** from this repo
 5. Open the Serial Monitor and observe you wondrous weather data print to the screen.
+
+*Note that the weather_staion example demonstrates all uses of the weather station, and displays a lot of data. For a simpler example that does not use the wind or rain sensors, see weather_shield_basic.*
+
 
 ## More Detailed Setup Guide
 *Links to more details*
